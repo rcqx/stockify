@@ -4,7 +4,7 @@ describe Book do
   context "To correctly instantiate a book object" do
     let(:book) { Book.new('2009-07-07', 'Elsevier', 'Good') }
 
-    it "can add the publish date" do 
+    it "can add and access the publish date property" do 
       expect(book.publish_date).to be_a Date
     end
     
@@ -17,13 +17,13 @@ describe Book do
     end
 
     it "can_be_archived? method returns false values" do
-    allow(book).to receive(:can_be_archived?).and_return(false)
-    expect(book.send(:can_be_archived?)).to be false
+      allow(book).to receive(:can_be_archived?).and_return(false)
+      expect(book.send(:can_be_archived?)).to be false
     end
 
     it "can_be_archived? method returns true values" do
       allow(book).to receive(:can_be_archived?).and_return(true)
       expect(book.send(:can_be_archived?)).to be true
-      end
+    end
   end
 end

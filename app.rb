@@ -14,5 +14,4 @@ class App
     7 - Add a music album
     8 - Exit"
   end
-
-end 
+end
